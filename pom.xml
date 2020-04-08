@@ -8,7 +8,7 @@
     <artifactId>batchOneJavaExercises</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties> <!-- Error:java: error: release version 5 not supported -->
+    <properties> <!-- Error:java: error: release version 5 not supported  -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
