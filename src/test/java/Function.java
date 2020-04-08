@@ -6,5 +6,5 @@ public class Function extends Exercise {
         System.out.println("alphabetical-----"+removeCharacter("sfdgtr$%hhfdjf&!tyu67"));
 
     }
-
+//
 }
