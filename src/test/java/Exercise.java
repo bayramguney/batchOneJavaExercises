@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class Exercise {
 
@@ -45,15 +45,55 @@ public class Exercise {
         }
 
         arr[j++] = arr[len - 1];
-
+        System.out.print("removeDuplicateUsingSorting-------");
         for (int k = 0; k < j; k++) {
             System.out.print(arr[k] + " ");
         }
     }
+   //5 removing dubs using hashmap--------------------------------------------------------------------------------------
 
+    public static void removeDuplicateUsingHashing(int arr[]) {
 
+        //Declare a hashmap
+        Map<Integer, Integer> map = new HashMap<>();
+        int len = arr.length;
 
+        //Traverse an array
+        for (int i = 0; i < len - 1; i++) {
+            //If key is already present in a map
+            if (map.containsKey(arr[i])) {
+                //Increment it's count
+                map.put(arr[i], map.get(arr[i]) + 1);
+            } else {
+               /*
+                If it's not present in a map
+                then put a key and it's initial count 1
+               */
+                map.put(arr[i], 1);
+            }
+        }
+        System.out.println();
+        System.out.print("removeDuplicateUsingMap-------");
+        //Print Each Key
+        map.forEach((k, v) -> System.out.print(k + " "));
+    }
+    //6 removing dubs using set--------------------------------------------------------------------------------------
+    public static void removeDuplicateUsingSet(int arr[]) {
 
+        //Declare set
+        Set st = new HashSet<>();
+        int len = arr.length;
+
+        //Traverse an array and add element in a set
+        for (int i = 0; i < len - 1; i++) {
+            //It only add unique value
+            st.add(arr[i]);
+        }
+        System.out.println();
+        System.out.print("removeDuplicateUsingSet-------");
+        //Print each element
+        st.forEach(elem -> System.out.print(elem + " "));
+    }
 
 
 
