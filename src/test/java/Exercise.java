@@ -1,4 +1,6 @@
- public class Exercise {
+import java.util.Arrays;
+
+public class Exercise {
 
     // 1--kendinden once gelen harf alfabetik olarak sonra geliyorsa o harfi almiyor-------------------------------
     public static String  alphabetical(String str) {
@@ -24,7 +26,32 @@
         str=str.replaceAll("[!,@,#,$,%,&,*]","");
         return str;
     }
-    //----------------------------------------------------------------------------------------------------------------------
+    //4 array icindedeki dublari eliyor---------------------------------------------------------------------------
+
+    public static void removeDuplicateUsingSorting(int arr[]) {
+
+        Arrays.sort(arr);
+
+        int len = arr.length;
+        int j = 0;
+
+        //Traverse an array
+        for (int i = 0; i < len - 1; i++) {
+
+            //if value present at i and i+1 index is not equal
+            if (arr[i] != arr[i + 1]) {
+                arr[j++] = arr[i];
+            }
+        }
+
+        arr[j++] = arr[len - 1];
+
+        for (int k = 0; k < j; k++) {
+            System.out.print(arr[k] + " ");
+        }
+    }
+
+
 
 
 
