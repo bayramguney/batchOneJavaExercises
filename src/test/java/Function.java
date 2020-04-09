@@ -7,6 +7,8 @@ public class Function extends Exercise {
         removeDuplicateUsingSorting(new int[]{5, 1, 2, 6, 4, 4, 5,});
         removeDuplicateUsingHashing(new int[]{5, 1, 2, 6, 4, 4, 5,});
         removeDuplicateUsingSet(new int[]{5, 1, 2, 6, 4, 4, 5,});
+        System.out.println("catanddog compareto-----"+catDogCompareTo("cat2dogcat$dog234"));
+        System.out.println("catanddog sunstring-----"+catDogSubstring("cat2dogcat$dog234"));
     }
 
 }

@@ -75,7 +75,7 @@ public class Exercise {
         System.out.println();
         System.out.print("removeDuplicateUsingMap-------");
         //Print Each Key
-        map.forEach((k, v) -> System.out.print(k + " "));
+        map.forEach((k, v) -> System.out.print(k + "  "));
     }
     //6 removing dubs using set--------------------------------------------------------------------------------------
     public static void removeDuplicateUsingSet(int arr[]) {
@@ -95,8 +95,33 @@ public class Exercise {
         st.forEach(elem -> System.out.print(elem + " "));
     }
 
-
-
+    //7 cat ve dog sayisi esitse true farkliysa false verecek
+    public static boolean catDogCompareTo(String str) {
+        System.out.println();
+        int len = str.length();
+        int cat = 0;
+        int dog = 0;
+        for (int i = 0; i < len - 2; i++) {
+            String temp = str.substring(i, i+3);
+            if (temp.compareTo("cat") == 0)
+            cat++;  // If both the strings are equal then this method returns 0 else it returns positive or negative value.
+            if (temp.compareTo("dog") == 0)
+            dog++;
+        }
+        if (cat == dog)
+        return true;
+  else
+        return false;
+    }
+    //8 cat ve dog sayisi esitse true farkliysa false verecek
+    public static boolean catDogSubstring(String str) {
+        int c=0;
+        for (int i=0;i<str.length()-2;i++) {
+            if (str.substring(i,i+3).equals("cat")) c++;
+            if (str.substring(i,i+3).equals("dog")) c--;
+        }
+        return (c==0);
+    }
 
 
 }
